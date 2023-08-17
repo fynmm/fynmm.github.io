@@ -1,0 +1,25 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "个人博客，主要是分享一些技术",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "serve": "vitepress serve docs"
+  },
+  "keywords": [
+    "react",
+    "vite",
+    "babel"
+  ],
+  "author": "HeartlessSoy",
+  "license": "ISC",
+  "devDependencies": {
+    "vitepress": "^1.0.0-rc.4"
+  },
+  "dependencies": {
+    "esbuild": "^0.19.2"
+  }
+}
