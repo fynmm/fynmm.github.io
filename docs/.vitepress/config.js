@@ -3,6 +3,7 @@ const primarySidebar = [
 ]
 
 module.exports = {
+  base: '/fynmm/',
   title: '无情酱油的博客',
   description: 'Just playing around.',
   themeConfig: {
