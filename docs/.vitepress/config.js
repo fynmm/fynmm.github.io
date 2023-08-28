@@ -1,12 +1,17 @@
 const primarySidebar = [
-  { text: 'Our Story', link: '/about/our-story' }
+  { text: '瀑布流', link: '/frontend/waterfall' },
+  { text: 'js', link: '/frontend/js' }
 ]
 
 module.exports = {
-  base: '/fynmm/',
+  base: '/',
   title: '无情酱油的博客',
   description: 'Just playing around.',
+  markdown: {
+    lineNumbers: true
+  },
   themeConfig: {
+
     search: false,
     searchMaxSuggestions: 10,
     footer: {
@@ -18,21 +23,23 @@ module.exports = {
       next: false,
     },
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'About', link: '/about/' },
-      { text: 'Contact', link: '/contact'},
-      { text: 'External', link: 'https://google.com' },
+      { text: '首页', link: '/' },
+      { text: '前端', link: '/frontend/waterfall' },
+      // { text: 'Contact', link: '/contact'},
+      // { text: 'External', link: 'https://google.com' },
     ],
     sidebar: {
-      '/about/': primarySidebar,
-      '/contact': primarySidebar,
+      '/frontend/': primarySidebar,
+      // '/contact': primarySidebar,
 
-  }
+    },
+
+
 
 
     // carbonAds: {
-      // code: 'CEBDT27Y',
-      // placement: 'vuejsorg'
+    // code: 'CEBDT27Y',
+    // placement: 'vuejsorg'
     // }
   }
 }
