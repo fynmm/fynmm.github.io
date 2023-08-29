@@ -1,31 +1,32 @@
-#!/usr/bin/env sh
 
-# abort on errors
-set -e
+# #!/usr/bin/env sh
 
-# build
-npm run build
+# # abort on errors
+# set -e
 
-# navigate into the build output directory
-cd docs/.vitepress/dist
+# # build
+# npm run build
 
-# if you are deploying to a custom domain
-# echo 'www.example.com' > CNAME
+# # navigate into the build output directory
+# cd docs/.vitepress/dist
 
-# git init
-git add -A
-git commit -m '瀑布流 - Grid实现'
+# # if you are deploying to a custom domain
+# # echo 'www.example.com' > CNAME
 
-git push origin master
+# # git init
+# git add -A
+# git commit -m '瀑布流 - Grid实现'
 
-# if you are deploying to https://<USERNAME>.github.io
-# git push -u git@github.com:fynmm/fynmm.github.io.git master
+# git push origin master
 
-# if you are deploying to https://<USERNAME>.github.io/<REPO>
-# git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
+# # if you are deploying to https://<USERNAME>.github.io
+# # git push -u git@github.com:fynmm/fynmm.github.io.git master
 
-cd -
+# # if you are deploying to https://<USERNAME>.github.io/<REPO>
+# # git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
+
+# cd -
 
 git add .
-git commit -m '瀑布流 - Grid实现'
+git commit -m $1
 git push
