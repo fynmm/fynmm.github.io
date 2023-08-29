@@ -1,6 +1,6 @@
 const primarySidebar = [
-  { text: '瀑布流', link: '/frontend/waterfall' },
-  { text: 'js', link: '/frontend/js' }
+  { text: '瀑布流-原生js实现', link: '/frontend/waterfall' },
+  { text: '瀑布流-grid实现', link: '/frontend/waterfallByGrid' }
 ]
 
 module.exports = {

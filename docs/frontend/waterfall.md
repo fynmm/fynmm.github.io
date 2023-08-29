@@ -1,11 +1,13 @@
-# 瀑布流
+---
+  lang: zh-CN
+  title: 原生js实现
+  description: 瀑布流 js 
+---
 
+# 瀑布流 - 原生js实现
 
-## 原生js实现
-
-先上效果图
+效果图
 ![效果图](image.png)
-
 
 
 

@@ -12,11 +12,11 @@ cd docs/.vitepress/dist
 # if you are deploying to a custom domain
 # echo 'www.example.com' > CNAME
 
-git init
+# git init
 git add -A
-git commit -m 'deploy'
+git commit -m '瀑布流 - Grid实现'
 
-git push -u origin master
+git push origin master
 
 # if you are deploying to https://<USERNAME>.github.io
 # git push -u git@github.com:fynmm/fynmm.github.io.git master
@@ -25,3 +25,7 @@ git push -u origin master
 # git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
 
 cd -
+
+git add .
+git commit -m '瀑布流 - Grid实现'
+git push
