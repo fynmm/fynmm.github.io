@@ -1,7 +1,4 @@
-const primarySidebar = [
-  { text: '瀑布流-原生js实现', link: '/frontend/waterfall' },
-  { text: '瀑布流-grid实现', link: '/frontend/waterfallByGrid' }
-]
+
 
 module.exports = {
   base: '/',
@@ -28,11 +25,22 @@ module.exports = {
       // { text: 'Contact', link: '/contact'},
       // { text: 'External', link: 'https://google.com' },
     ],
-    sidebar: {
-      '/frontend/': primarySidebar,
-      // '/contact': primarySidebar,
-
-    },
+    sidebar: [
+      {
+        'text': '布局',
+        items: [
+          { text: '瀑布流-原生js实现', link: '/frontend/waterfall' },
+          { text: '瀑布流-grid实现', link: '/frontend/waterfallByGrid' }
+        ]
+      },
+      {
+        'text': '进阶',
+        items: [
+          { text: 'Source map', link: '/advanced/sourcemap' },
+          
+        ]
+      }
+    ],
 
 
 

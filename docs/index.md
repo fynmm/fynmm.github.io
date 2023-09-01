@@ -1,3 +1,21 @@
+---
+
+layout: home
+title: 无情酱油 blog 博客 日记
+description: 不定期的分享一些东西
+
+hero:
+  name: vue-template 
+  text:
+  tagline: 基于vue3,vue-cli4二次封装的移动端框架
+  actions:
+    - theme: brand
+      text: 开始
+      link: /frontend/waterfall
+    # - theme: alt
+    #   text: 访问github
+      # link: https://github.com/Yinzhuo19970516/vue-template
+---
 <!-- ---
 home: true
 
