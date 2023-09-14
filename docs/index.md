@@ -7,7 +7,7 @@ description: 不定期的分享一些东西
 hero:
   name: 无情酱油 
   text: 
-  tagline: 技术是第一生产力3
+  tagline: 技术是第一生产力10
   actions:
     - theme: brand
       text: 开始
