@@ -15,10 +15,10 @@ module.exports = {
       message: 'Released under the MIT License.',
       copyright: 'Copyright © 2019-present Evan You'
     },
-    docFooter: {
-      prev: false,
-      next: false,
-    },
+    // docFooter: {
+    //   prev: false,
+    //   next: false,
+    // },
     nav: [
       { text: '首页', link: '/' },
       { text: '前端', link: '/frontend/waterfall' },
@@ -27,7 +27,7 @@ module.exports = {
     ],
     sidebar: [
       {
-        'text': '布局',
+        'text': 'CSS',
         items: [
           { text: '瀑布流-原生js实现', link: '/frontend/waterfall' },
           { text: '瀑布流-grid实现', link: '/frontend/waterfallByGrid' }
@@ -39,7 +39,14 @@ module.exports = {
           { text: 'Source map', link: '/advanced/sourcemap' },
           
         ]
-      }
+      },
+      {
+        'text': '部署',
+        items: [
+          { text: 'jenkins安装', link: '/deploy/jenkins' },
+          { text: '自动化部署', link: '/deploy/auto' },
+        ]
+      },
     ],
 
 
