@@ -6,7 +6,7 @@
 # Docker Jenkins 一步步教会你实现一键部署前端项目
 
 <!-- ## 思路 -->
-<!-- 我们使用Docker安装Jenkins，让Jenkins监控github(或者gitee)push，然后下拉代码、打包进而部署到服务器 -->
+<!-- 我们使用Docker安装Jenkins，让Jenkins监控github(或者gitee)push，然后下拉代码、打包、压缩，然后把压缩包发到服务器，然后服务器里的nginx reload -->
 ## Docker安装以及Jenkins安装
 
 [安装请移步这里](/deploy/jenkins)
@@ -18,6 +18,11 @@
 先在 Dashboard-系统管理-插件管理-Available plugins 下载node插件;
 然后 Dashboard-系统管理-全局工具配置- nodejs安装，设置个node版本;
 ![Alt text](image-7.png)
+
+### Publish over SSH
+Dashboard-系统管理-系统配置 
+![Alt text](image-20.png)
+
 
 
 ## 任务
@@ -53,10 +58,18 @@ cat /.ssh/id_rsa.pub // 添加ssh
 选择刚才添加的node环境
 ![Alt text](image-18.png)
 
-### 脚本
+### shell脚本
+这里打包出来的dist还只是在jenkins路径里，如果jenkins和服务器是不同的服务器，那么还需要使用publish over ssh将dist发送到服务器。
 ![Alt text](image-19.png)
 
-写完脚本之后，保存即可。
+### 后续步骤
+此时我们只是打完并压缩dist，然后我们需要发送包到服务器，选择图中的选项。
+![Alt text](image-21.png)
+
+### 配置SSH Publishers
+![Alt text](image-22.png)
+
+
 
 ## 服务器nginx设置
 ### 第4行高亮处需要修改
@@ -66,7 +79,7 @@ server
     listen 8081;
     server_name xx.xx.xx.xx; //腾讯服务器ip
     index index.php index.html index.htm default.php default.htm default.html;
-    root /var/jenkins_home/workspace/project/docs/.vitepress/dist;
+    root /www/wwwroot/vitepress2/dist;
 
     #SSL-START SSL相关配置，请勿删除或修改下一行带注释的404规则
     #error_page 404/404.html;
