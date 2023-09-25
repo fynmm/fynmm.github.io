@@ -200,4 +200,6 @@ server
 }
 ```
 
+## 参考文章
+[Jenkins通过Publish Over SSH实现前端项目部署到远程服务全纪录](https://juejin.cn/post/7000534516410351646) 
 
