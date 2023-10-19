@@ -12,8 +12,8 @@ module.exports = {
     search: false,
     searchMaxSuggestions: 10,
     footer: {
-      message: 'Released under the MIT License.',
-      copyright: 'Copyright © 2019-present Evan You'
+      message: 'MIT License',
+      copyright: 'Copyright 2023 by HeartlessSoy.  <a href="https://beian.miit.gov.cn/" target="_blank">苏ICP备2023035767号-1</a>'
     },
     // docFooter: {
     //   prev: false,
@@ -27,10 +27,11 @@ module.exports = {
     ],
     sidebar: [
       {
-        'text': 'CSS',
+        'text': '前端',
         items: [
           { text: '瀑布流-原生js实现', link: '/frontend/waterfall' },
-          { text: '瀑布流-grid实现', link: '/frontend/waterfallByGrid' }
+          { text: '瀑布流-grid实现', link: '/frontend/waterfallByGrid' },
+          // { text: '前端柯里化', link: '/frontend/curry'},
         ]
       },
       {
