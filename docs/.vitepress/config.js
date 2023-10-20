@@ -13,7 +13,7 @@ module.exports = {
     searchMaxSuggestions: 10,
     footer: {
       message: 'MIT License',
-      copyright: 'Copyright 2023 by HeartlessSoy.  <a href="https://beian.miit.gov.cn/" target="_blank">苏ICP备2023035767号-1</a>'
+      copyright: 'Copyright 2023 by HeartlessSoy.  <a href="https://beian.miit.gov.cn/" target="_blank">苏ICP备2023035767号-1</a> . <a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010602007690" target="_blank">沪公网安备 31010602007690</a>'
     },
     // docFooter: {
     //   prev: false,
@@ -31,7 +31,7 @@ module.exports = {
         items: [
           { text: '瀑布流-原生js实现', link: '/frontend/waterfall' },
           { text: '瀑布流-grid实现', link: '/frontend/waterfallByGrid' },
-          // { text: '前端柯里化', link: '/frontend/curry'},
+          { text: '前端柯里化', link: '/frontend/curry'},
         ]
       },
       {
@@ -59,6 +59,3 @@ module.exports = {
     // }
   }
 }
-
-
-//  http://www.dtmao.cc/Html5/111900.html
