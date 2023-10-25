@@ -7,14 +7,11 @@ module.exports = {
   markdown: {
     lineNumbers: true
   },
+  // theme: require.resolve('./theme/index.js'),
   themeConfig: {
 
     search: false,
     searchMaxSuggestions: 10,
-    footer: {
-      message: 'MIT License',
-      copyright: 'Copyright 2023 by HeartlessSoy.  <a href="https://beian.miit.gov.cn/" target="_blank">苏ICP备2023035767号-1</a> . <a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010602007690" target="_blank">沪公网安备 31010602007690</a>'
-    },
     // docFooter: {
     //   prev: false,
     //   next: false,
@@ -22,6 +19,7 @@ module.exports = {
     nav: [
       { text: '首页', link: '/' },
       { text: '前端', link: '/frontend/waterfall' },
+      { text: '抽签', link: '/news/chouqian' },
       // { text: 'Contact', link: '/contact'},
       // { text: 'External', link: 'https://google.com' },
     ],

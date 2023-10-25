@@ -2,6 +2,7 @@
   lang: zh-CN
   title: Docker Jenkins 实现一键部署前端项目
   description: Docker,Docker安装,Jenkin,Jenkins安装,自动部署,前端项目,git,gitee,自动,部署
+  aside: false
 ---
 # Docker Jenkins 一步步教会你实现一键部署前端项目
 
