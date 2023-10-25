@@ -22,10 +22,10 @@ cd docs/.vitepress/dist
 git add -A
 git commit -m $1
 
-git push origin master
+# git push origin master
 
 # if you are deploying to https://<USERNAME>.github.io
-# git push -u git@github.com:fynmm/fynmm.github.io.git master
+git push -u git@github.com:fynmm/fynmm.github.io.git master
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
 # git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages

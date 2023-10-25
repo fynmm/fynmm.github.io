@@ -17,7 +17,6 @@
   const { page, theme, frontmatter } = useData();
 
   const hasSidebar = computed(() => {
-    console.log(123456,frontmatter)
     return (
       frontmatter.value.aside !== false && frontmatter.value.layout !== 'home'
     )
