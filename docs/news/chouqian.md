@@ -73,7 +73,7 @@
 - 如果中签，一般会发短信通知你，app会显示购买按钮
 
 :::tip 恭喜
-【NIKE中国】您的订单C00123456789已创建。如订单尚未支付，请您在规定时间内完成付款。您可随时在此查看您的订单状态：<a href="https://go.nike.com/CNOrder" target="_blank" rel="noopener noreferrer">(https://go.nike.com/CNOrder)</a>帮助：<a href="https://www.nike.com/cn/help" target="_blank" rel="noopener noreferrer">(https://www.nike.com/cn/help)</a> 请务必保存好本消息。
+【NIKE中国】您的订单CC0089244479已创建。如订单尚未支付，您可点击<a href="https://www.nike.com.cn/orders/details/" target="_blank" rel="noopener noreferrer">https://www.nike.com.cn/orders/details/</a> 在规定时间内完成付款。请务必保存好本消息。
 :::
 <div style="display:flex;justify-content: center;">
 <img src="/news/image-16.png"  title="已抽中" width="300"  />    
@@ -98,8 +98,8 @@
 
 
 <div style="display:flex;justify-content: space-evenly;">
-<img src="/news/image-18.png"  title="分享订单号1" width="300"  />
-<img src="/news/image-19.png" title="分享订单号2" width="200"  />
+<img src="/news/image-19.png"  title="分享订单号1" width="300"  />
+<img src="/news/image-18.png" title="分享订单号2" width="300"  />
 
 </div>
 
