@@ -27,16 +27,19 @@ module.exports = {
       {
         'text': '前端',
         items: [
+          { text: 'react知识点', link: '/frontend/react' },
           { text: '瀑布流-原生js实现', link: '/frontend/waterfall' },
           { text: '瀑布流-grid实现', link: '/frontend/waterfallByGrid' },
-          { text: '前端柯里化', link: '/frontend/curry'},
+          { text: '前端柯里化', link: '/frontend/curry' },
+          { text: '深拷贝', link: '/frontend/deep-copy' },
+          { text: '订阅发布模式', link: '/frontend/subscribe-publish' },
         ]
       },
       {
         'text': '进阶',
         items: [
           { text: 'Source map', link: '/advanced/sourcemap' },
-          
+
         ]
       },
       {
