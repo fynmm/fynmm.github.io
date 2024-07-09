@@ -39,6 +39,7 @@ module.exports = {
         'text': '进阶',
         items: [
           { text: 'Source map', link: '/advanced/sourcemap' },
+          { text: 'npm包 修复', link: '/advanced/package' },
 
         ]
       },

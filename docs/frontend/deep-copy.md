@@ -22,55 +22,29 @@ console.log(copiedData) // {a: 1,b:[1,2,3],c:[{a:345}]}
 缺点： 无法拷贝函数属性,只适用于简单的数据对象
 
 
-## 个人版
+## 进阶版
 ```js
-function deepClone(obj = {}, hash = new WeakMap()) {
-  if (typeof obj != 'object' || obj == null) {
+function deepClone(obj,map = new WeakMap()) {
+  if (typeof obj != 'object' || obj === null) {
     return obj;
   }
-  if (hash.get(obj)) {
-    return hash.get(obj);
+  if (obj instanceof Date) {
+    return new Date(obj)
   }
-  let result;
-
-
-  if (obj instanceof Array) {
-    result = []
-  } else {
-    result = {}
+  if (obj instanceof RegExp) {
+    return new RegExp(obj)
   }
-  hash.set(obj,result);
+  if (map.has(obj)) {
+    return map.get(obj)
+  }
+  let cloneObj = new obj.constructor();
+  map.set(obj,cloneObj);
   for (const key in obj) {
-    if (obj.hasOwnProperty(key)) {
-      result[key] = deepClone(obj[key], hash)
+    if (Object.prototype.hasOwnProperty.call(obj, key)) {
+      cloneObj[key] = deepClone(obj[key],map)
     }
   }
-  return result;
-}
-```
-
-## ChatGPT版
-```js
-function deepCopy(obj, cache = new WeakMap()) {
-  if (typeof obj !== 'object' || obj === null) {
-    return obj;
-  }
-  
-  if (cache.has(obj)) {
-    return cache.get(obj);
-  }
-  
-  let result = Array.isArray(obj) ? [] : {};
-  
-  cache.set(obj, result);
-  
-  for (let key in obj) {
-    if (obj.hasOwnProperty(key)) {
-      result[key] = deepCopy(obj[key], cache);
-    }
-  }
-  
-  return result;
+  return cloneObj;
 }
 ```
 

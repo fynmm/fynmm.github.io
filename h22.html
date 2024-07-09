@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta http-equiv="Expirse" content="0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-control" content="no-cache" />
+    <meta http-equiv="Cache" content="no-cache" />
+    <meta name="referrer" content="no-referrer" />
+    <title>通信</title>
+  </head>
+  <body>
+    <style>
+      .an {
+        width: 0px;
+        height: 0px;
+        border-style: solid;
+        border-width: 0 50px 50px;
+        border-color: transparent transparent #ffad60;
+      }
+      .bn {
+        width: 0;
+        height: 0;
+        border-style:solid;
+        border-width: 0 50px 50px;
+        border-color: transparent transparent #d9534f;
+        position: relative;
+      }
+      .bn::after {
+        position: absolute;
+        content: '';
+        border-style:solid;
+        border-width: 0 40px 40px;
+        border-color: transparent transparent white;
+        top: 6px;
+    left: -40px;
+        /* position: ; */
+      }
+      .wrap {
+          display: grid;
+          width: 100%;
+          grid-template-columns: 300px auto 300px;
+      }
+  
+      .left,
+      .right,
+      .middle {
+          height: 100px;
+      }
+  
+      .left {
+          background: coral;
+      }
+  
+      .right {
+          width: 800px;
+          background: lightblue;
+      }
+  
+      .middle {
+          background: #555;
+      }
+  </style>
+  <div class="wrap">
+      <div class="left">左侧</div>
+      <div class="middle">中间</div>
+      <div class="right">右侧</div>
+  </div>
+
+  <div class="an"></div>
+  <div class="bn"></div>
+  <script>
+
+    const c = new AbortController();
+    const {signal} = c;
+    setTimeout(()=>{
+      signal.abort()
+    })
+
+    function fetchWithTimeout(url,options,timeout = 5000) {
+  return new Promise((resolve,reject) => {
+    const control = new AbortController();
+    const { signal} = control;
+    setTimeout(() => {
+      control.abort();
+      reject(new Error('超时'))
+    },timeout)
+
+    fetch(url,{...options}).then(response =>{
+      if (!response.ok) {
+        throw new Error{'s'}
+      }
+      return response.json()
+    }).then(resolve).catch(reject)
+  })
+}
+
+fetchWithTimeout('https://www.baidu.com',{},5000)
+  </script>
+</html>
