@@ -21,6 +21,7 @@ cd docs/.vitepress/dist
 # git init
 git add -A
 git commit -m $1
+git push
 
 # git push origin master
 
